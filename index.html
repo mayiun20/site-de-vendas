@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MercadoStyle — Marketplace</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+          <rect width="48" height="48" rx="10" fill="#ffb000"/>
+          <path d="M14 30 L20 18 L28 30 Z" fill="#fff"/>
+        </svg>
+        <div class="brand">MercadoStyle</div>
+      </div>
+
+      <div class="search">
+        <input id="search" placeholder="Pesquisar produtos, marcas e categorias..." />
+        <button class="icon-btn" onclick="filterProducts()">🔍</button>
+      </div>
+
+      <div class="actions">
+        <button class="icon-btn" onclick="toggleCart()">🛒 <span id="cart-count">0</span></button>
+        <button class="btn">Vender</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside>
+        <div class="categories">
+          <h3>Categorias</h3>
+          <div class="cat-list">
+            <div class="cat" onclick="filterBy('todos')">Todos os produtos</div>
+            <div class="cat" onclick="filterBy('eletronicos')">Eletrônicos</div>
+            <div class="cat" onclick="filterBy('moda')">Moda</div>
+            <div class="cat" onclick="filterBy('casa')">Casa</div>
+            <div class="cat" onclick="filterBy('beleza')">Beleza</div>
+          </div>
+        </div>
+      </aside>
+
+      <section>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+          <div style="color:var(--muted)">Mostrando <span id="shown-count">6</span> produtos</div>
+          <div style="color:var(--muted)">Ordenar: 
+            <select id="sort" onchange="applySort(this.value)">
+              <option value="relevancia">Relevância</option>
+              <option value="preco-asc">Preço: menor</option>
+              <option value="preco-desc">Preço: maior</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid" id="product-grid">
+          <!-- Produtos com imagens em SVG (embutidas) -->
+          <article class="card" data-category="Jóia" data-price="72.450,00" onclick="openProduct(0)">
+            <div class="media">
+              <img alt="Jóia" src="NIM038043_1.webp">
+            </div>
+            <div class="title">Colar de diamante rosa</div>
+            <div class="price">R$ 72.450,00</div>
+            <div class="meta"><div>LojaTech</div><div>⭐ 4.7</div></div>
+            <div class="actions-row">
+              <button class="btn" onclick="event.stopPropagation(); addToCart(0)">Adicionar</button>
+              <button class="icon-btn" onclick="event.stopPropagation(); favorite(0)">❤</button>
+            </div>
+          </article>
+          <!-- (outros produtos idênticos aos do arquivo anterior podem ser copiados aqui) -->
+
+           <!-- Produtos com imagens em SVG (embutidas) -->
+          <article class="card" data-category="Jóia" data-price="850,00" onclick="openProduct(0)">
+            <div class="media">
+              <img alt="Jóia" src="conjunto_colar_e_brinco_pedra_rosa_claro_folheado_a_ouro_18k_36111349_1_f7f9d2d58792f1f1925d768fb260cfec.webp">
+            </div>
+            <div class="title">Jóia de Quartzo Rosa</div>
+            <div class="price">R$850,00</div>
+            <div class="meta"><div>LojaTech</div><div>⭐ 4.7</div></div>
+            <div class="actions-row">
+              <button class="btn" onclick="event.stopPropagation(); addToCart(0)">Adicionar</button>
+              <button class="icon-btn" onclick="event.stopPropagation(); favorite(0)">❤</button>
+            </div>
+          </article>
+          <!-- (outros produtos idênticos aos do arquivo anterior podem ser copiados aqui) -->
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Carrinho -->
+  <aside class="cart-panel" id="cart-panel">
+    <div class="cart-head"><strong>Carrinho</strong><button class="close-x" onclick="toggleCart()">✕</button></div>
+    <div class="cart-body" id="cart-body">Nenhum item no carrinho.</div>
+    <div class="cart-footer">
+      <div>Total: <strong id="cart-total">R$ 0,00</strong></div>
+      <button class="btn" onclick="checkout()">Finalizar compra</button>
+    </div>
+  </aside>
+
+  <!-- Modal de produto -->
+  <div class="modal" id="modal">
+    <div class="modal-card">
+      <div><div class="media" id="modal-media"></div></div>
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px">
+          <div><h2 id="modal-title"></h2><div style="color:var(--muted)" id="modal-seller"></div></div>
+          <button class="close-x" onclick="closeModal()">✕</button>
+        </div>
+        <p id="modal-desc" style="margin-top:12px;color:var(--muted)"></p>
+        <div style="margin-top:12px;font-size:20px;font-weight:700;color:var(--brand)" id="modal-price"></div>
+        <div style="margin-top:18px;display:flex;gap:10px">
+          <button class="btn" id="modal-add">Adicionar ao carrinho</button>
+          <button class="icon-btn" onclick="favorite(currentProduct)">❤</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
