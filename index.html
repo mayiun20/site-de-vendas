@@ -34,17 +34,18 @@
           <h3>Categorias</h3>
           <div class="cat-list">
             <div class="cat" onclick="filterBy('todos')">Todos os produtos</div>
-            <div class="cat" onclick="filterBy('eletronicos')">Corrente</div>
-            <div class="cat" onclick="filterBy('moda')">relógio</div>
-            <div class="cat" onclick="filterBy('casa')">pulseira</div>
-            <div class="cat" onclick="filterBy('beleza')">anel</div>
+            <div class="cat" onclick="filterBy('corrente')">Corrente</div>
+            <div class="cat" onclick="filterBy('relógio')">relógio</div>
+            <div class="cat" onclick="filterBy('pulseira')">pulseira</div>
+            <div class="cat" onclick="filterBy('anel')">anel</div>
+            <div class="cat" onclick="filterBy('anel')">brinco</div>
           </div>
         </div>
       </aside>
 
       <section>
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-          <div style="color:var(--muted)">Mostrando <span id="shown-count">6</span> produtos</div>
+          <div style="color:var(--muted)">Mostrando <span id="shown-count">9</span> produtos</div>
           <div style="color:var(--muted)">Ordenar: 
             <select id="sort" onchange="applySort(this.value)">
               <option value="relevancia">Relevância</option>
@@ -108,6 +109,81 @@
             <div class="title">Pulseira Articulada com Quartzo Rosa e Diamantes em Ouro Rosé 18K</div>
             <div class="price">R$  25.350,00</div>
             <div class="meta"><div>LojaTech</div><div>⭐ 4.6</div></div>
+            <div class="actions-row">
+              <button class="btn" onclick="event.stopPropagation(); addToCart(0)">Adicionar</button>
+              <button class="icon-btn" onclick="event.stopPropagation(); favorite(0)">❤</button>
+            </div>
+          </article>
+          <!-- (outros produtos idênticos aos do arquivo anterior podem ser copiados aqui) -->
+
+              <!-- Produtos com imagens em SVG (embutidas) -->
+          <article class="card" data-category="Jóia" data-price=" 4.990,00" onclick="openProduct(0)">
+            <div class="media">
+              <img alt="Anéis" src="anel.webp">
+            </div>
+            <div class="title">Anel com Rubi e Diamantes em Ouro Amarelo 18K</div>
+            <div class="price">R$4.990,00</div>
+            <div class="meta"><div>LojaTech</div><div>⭐ 4.3</div></div>
+            <div class="actions-row">
+              <button class="btn" onclick="event.stopPropagation(); addToCart(0)">Adicionar</button>
+              <button class="icon-btn" onclick="event.stopPropagation(); favorite(0)">❤</button>
+            </div>
+          </article>
+          <!-- (outros produtos idênticos aos do arquivo anterior podem ser copiados aqui) -->
+
+            <!-- Produtos com imagens em SVG (embutidas) -->
+          <article class="card" data-category="Jóia" data-price=" 2.600,00" onclick="openProduct(0)">
+            <div class="media">
+              <img alt="Anéis" src="NIM027720_1.webp">
+            </div>
+            <div class="title">Anel Gota em Topázio Azul em Ouro Amarelo 18k</div>
+            <div class="price">R$ 2.600,00</div>
+            <div class="meta"><div>LojaTech</div><div>⭐ 4.2</div></div>
+            <div class="actions-row">
+              <button class="btn" onclick="event.stopPropagation(); addToCart(0)">Adicionar</button>
+              <button class="icon-btn" onclick="event.stopPropagation(); favorite(0)">❤</button>
+            </div>
+          </article>
+          <!-- (outros produtos idênticos aos do arquivo anterior podem ser copiados aqui) -->
+
+           <!-- Produtos com imagens em SVG (embutidas) -->
+          <article class="card" data-category="Jóia" data-price="690,00" onclick="openProduct(0)">
+            <div class="media">
+              <img alt="relógio" src="re.webp">
+            </div>
+            <div class="title">Relógio Monte Carlo Feminino em Aço Rosé</div>
+            <div class="price">R$690,00</div>
+            <div class="meta"><div>LojaTech</div><div>⭐ 4.9</div></div>
+            <div class="actions-row">
+              <button class="btn" onclick="event.stopPropagation(); addToCart(0)">Adicionar</button>
+              <button class="icon-btn" onclick="event.stopPropagation(); favorite(0)">❤</button>
+            </div>
+          </article>
+          <!-- (outros produtos idênticos aos do arquivo anterior podem ser copiados aqui) -->
+
+           <!-- Produtos com imagens em SVG (embutidas) -->
+          <article class="card" data-category="Jóia" data-price="4.690,00" onclick="openProduct(0)">
+            <div class="media">
+              <img alt="relógio" src="azul.webp">
+            </div>
+            <div class="title">Relogio Bulova Automático Sutton Feminino em Couro Azul com Madrepérola e Lente de Safira 97L180N</div>
+            <div class="price">R$4.690,00</div>
+            <div class="meta"><div>LojaTech</div><div>⭐ 4.1</div></div>
+            <div class="actions-row">
+              <button class="btn" onclick="event.stopPropagation(); addToCart(0)">Adicionar</button>
+              <button class="icon-btn" onclick="event.stopPropagation(); favorite(0)">❤</button>
+            </div>
+          </article>
+          <!-- (outros produtos idênticos aos do arquivo anterior podem ser copiados aqui) -->
+
+          <!-- Produtos com imagens em SVG (embutidas) -->
+          <article class="card" data-category="Jóia" data-price=" 19.840,00" onclick="openProduct(0)">
+            <div class="media">
+              <img alt="brincos" src="brinco.webp">
+            </div>
+            <div class="title">Brinco Maxi Gota com Quartzo Rosa e Diamantes em Ouro Rosé 18K</div>
+            <div class="price">R$ 19.840,00</div>
+            <div class="meta"><div>LojaTech</div><div>⭐ 5</div></div>
             <div class="actions-row">
               <button class="btn" onclick="event.stopPropagation(); addToCart(0)">Adicionar</button>
               <button class="icon-btn" onclick="event.stopPropagation(); favorite(0)">❤</button>
