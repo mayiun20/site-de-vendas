@@ -14,7 +14,7 @@
           <rect width="48" height="48" rx="10" fill="#ffb000"/>
           <path d="M14 30 L20 18 L28 30 Z" fill="#fff"/>
         </svg>
-        <div class="brand">MercadoStyle</div>
+        <div class="brand">CarneiroMont</div>
       </div>
 
       <div class="search">
@@ -34,10 +34,10 @@
           <h3>Categorias</h3>
           <div class="cat-list">
             <div class="cat" onclick="filterBy('todos')">Todos os produtos</div>
-            <div class="cat" onclick="filterBy('eletronicos')">Eletrônicos</div>
-            <div class="cat" onclick="filterBy('moda')">Moda</div>
-            <div class="cat" onclick="filterBy('casa')">Casa</div>
-            <div class="cat" onclick="filterBy('beleza')">Beleza</div>
+            <div class="cat" onclick="filterBy('eletronicos')">Corrente</div>
+            <div class="cat" onclick="filterBy('moda')">relógio</div>
+            <div class="cat" onclick="filterBy('casa')">pulseira</div>
+            <div class="cat" onclick="filterBy('beleza')">anel</div>
           </div>
         </div>
       </aside>
@@ -77,7 +77,37 @@
             </div>
             <div class="title">Jóia de Quartzo Rosa</div>
             <div class="price">R$850,00</div>
-            <div class="meta"><div>LojaTech</div><div>⭐ 4.7</div></div>
+            <div class="meta"><div>LojaTech</div><div>⭐ 4.9</div></div>
+            <div class="actions-row">
+              <button class="btn" onclick="event.stopPropagation(); addToCart(0)">Adicionar</button>
+              <button class="icon-btn" onclick="event.stopPropagation(); favorite(0)">❤</button>
+            </div>
+          </article>
+          <!-- (outros produtos idênticos aos do arquivo anterior podem ser copiados aqui) -->
+
+           <!-- Produtos com imagens em SVG (embutidas) -->
+          <article class="card" data-category="Jóia" data-price=" 3.590,00" onclick="openProduct(0)">
+            <div class="media">
+              <img alt="Pulseira" src="pul.webp">
+            </div>
+            <div class="title">Pulseira com Topázio Azul e Topázio em prata</div>
+            <div class="price">R$  3.590,00</div>
+            <div class="meta"><div>LojaTech</div><div>⭐ 4.5</div></div>
+            <div class="actions-row">
+              <button class="btn" onclick="event.stopPropagation(); addToCart(0)">Adicionar</button>
+              <button class="icon-btn" onclick="event.stopPropagation(); favorite(0)">❤</button>
+            </div>
+          </article>
+          <!-- (outros produtos idênticos aos do arquivo anterior podem ser copiados aqui) -->
+
+            <!-- Produtos com imagens em SVG (embutidas) -->
+          <article class="card" data-category="Jóia" data-price=" 25.350,00" onclick="openProduct(0)">
+            <div class="media">
+              <img alt="Pulseira" src="p.webp">
+            </div>
+            <div class="title">Pulseira Articulada com Quartzo Rosa e Diamantes em Ouro Rosé 18K</div>
+            <div class="price">R$  25.350,00</div>
+            <div class="meta"><div>LojaTech</div><div>⭐ 4.6</div></div>
             <div class="actions-row">
               <button class="btn" onclick="event.stopPropagation(); addToCart(0)">Adicionar</button>
               <button class="icon-btn" onclick="event.stopPropagation(); favorite(0)">❤</button>
